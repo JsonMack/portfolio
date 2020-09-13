@@ -8,8 +8,17 @@ header {
     height: 40px;
 }
 
-nav {
-    background: red;
+header h3 {
+    text-align: center;
+}
+
+#sidebar {
+    min-height: 80vh;
+    max-width: 96px;
+}
+
+.nav a {
+    max-height: 48px;
 }
 
 footer {
@@ -18,8 +27,8 @@ footer {
     max-height: 80px;
 }
 
-#content {
-    background: blue;
+footer h3 {
+    text-align: center;
 }
 
 .background-black-light {
@@ -41,3 +50,10 @@ footer {
     background-color: #f6e9e9;
     color: #f6e9e9;
 }
+
+@media (max-width: 768px) {
+    #sidebar {
+        max-width: 100%;
+    }
+}
+
