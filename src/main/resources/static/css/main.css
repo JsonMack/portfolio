@@ -1,5 +1,10 @@
+html {
+
+}
+
 body {
     font-family: "Roboto Mono", serif;
+    min-height: 100%;
 }
 
 header {
@@ -9,22 +14,24 @@ header {
 }
 
 #sidebar {
-    min-height: 1100px;
+    min-height: 1000px;
     max-width: 96px;
 }
 
-.nav a {
+#sidebar a {
     max-height: 48px;
 }
 
 footer {
-    height: 80px;
-    min-height: 80px;
-    max-height: 80px;
+    position: fixed;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 footer h3 {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .background-black-light {
