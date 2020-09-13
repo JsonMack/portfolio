@@ -3,6 +3,10 @@
 target
 *.iml
 
+# Sensitive files
+application-production.yml
+application-development.yml
+
 # Compiled class file
 *.class
 

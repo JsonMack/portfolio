@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-    <head th:replace="fragments/header :: head">
-<!--        <div th:insert="fragments/header :: head"></div>-->
-    </head>
-    <body class="bg-black">
-        <header th:replace="fragments/header :: body"></header>
-        <footer th:replace="fragments/footer :: footer"></footer>
+    <head th:include="fragments/head :: head"></head>
+
+    <body class="background-black-dark">
+        <header class="background-black-light">
+            <h3>Header</h3>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div th:include="fragments/sidebar :: sidebar" class="col-sm">
+                    <h3>Sidebar</h3>
+                </div>
+                <div id="content" class="col-lg">
+                    <h3>Content</h3>
+                </div>
+            </div>
+        </div>
+        <footer th:include="fragments/footer :: footer"></footer>
     </body>
 </html>

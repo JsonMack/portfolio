@@ -1,9 +1,7 @@
 server:
   port: 8080
 spring:
-  thymeleaf:
-    cache: false
-    reactive:
-      max-chunk-size: 8192
+  profiles:
+    active: "development"
 
 

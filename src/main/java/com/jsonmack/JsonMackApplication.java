@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @author Jason MacKeigan
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguratio
         HibernateJpaAutoConfiguration.class,
         DataSourceAutoConfiguration.class
 })
+@PropertySource("classpath:application.yml")
 public class JsonMackApplication {
 
     public static void main(String[] args) {
