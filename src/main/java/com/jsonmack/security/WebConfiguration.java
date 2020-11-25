@@ -8,12 +8,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * @author Jason MacKeigan
  */
-//@EnableWebMvc
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/resources/static/css/**", "/resources/templates/**");
+
     }
 }

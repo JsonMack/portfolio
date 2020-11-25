@@ -12,15 +12,18 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
-//        web.ignoring().antMatchers("/resources/**", "/static/**");
+    public void configure(WebSecurity web) {
+
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/resources/**", "/static/**").permitAll();
+        http.authorizeRequests()
+                .antMatchers("/resources/**", "/static/**")
+                .permitAll();
 
-        http.formLogin().disable().httpBasic().disable();
+        http.formLogin().disable()
+                .httpBasic().disable();
     }
 
 }

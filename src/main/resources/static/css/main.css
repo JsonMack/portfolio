@@ -6,64 +6,6 @@ body {
     font-family: "Roboto Mono", serif;
 }
 
-header {
-    border-style: dashed;
-    border-color: red;
-}
-
-header > h1 {
-    text-align: left;
-}
-
-main {
-    border-style: dashed;
-    border-color: green;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 512px;
-}
-
-#sidebar {
-    border-style: dashed;
-    border-color: blue;
-    grid-column-start: 1;
-}
-
-#content {
-    flex: 2 auto;
-}
-
-footer h3 {
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.background-black-light {
-    background-color: #363333;
-}
-
-.background-black-dark {
-    background-color: #272121;
-}
-
-.background-orange {
-    background-color: #e16428;
-}
-
-.background-white-light {
-    background-color: #f6e9e9;
-}
-
-.text-white-light {
-    color: #f6e9e9;
-}
-
-@media (max-width: 768px) {
-    #sidebar {
-        max-width: 100%;
-    }
-}
-
 @font-face {
     font-family: 'Roboto Mono', monospace;
 }
