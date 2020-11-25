@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
     <body th:fragment="sidebar">
-        <div class="nav nav-pills nav-fill justify-content-center" id="sidebar" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active"
-               id="bio"
-               data-toggle="pill"
-               href="#bio"
-               role="tab"
-               aria-controls="bio"
-               aria-selected="true">Bio
-            </a>
 
-            <a class="nav-link"
-               id="projects"
-               data-toggle="pill"
-               href="#projects"
-               role="tab"
-               aria-controls="bio"
-               aria-selected="false">Profile
-            </a>
-            <a class="nav-link"
-               id="links"
-               data-toggle="pill"
-               href="#links"
-               role="tab"
-               aria-controls="bio"
-               aria-selected="false">Links
-            </a>
-        </div>
+        <nav>
+            <ol>
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ol>
+        </nav>
     </body>
 </html>
