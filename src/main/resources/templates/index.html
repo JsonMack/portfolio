@@ -1,47 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-    <head th:include="fragments/head :: head"></head>
+    <head th:include="fragments/head :: head">
 
-    <body class="bg-dark">
-        <header>
-            <h1 class="text-white-light">Jason MacKeigan</h1>
+    </head>
+
+    <body class="bg-dark text-light">
+        <header class="w-100 bg-black">
+            <h1 class="text-light text-center">Jason MacKeigan</h1>
         </header>
 
         <main>
-            <section id="content">
-                <article id="bio">
-                    <p class="text-white-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto aut et, excepturi iste itaque laboriosam nostrum nulla officiis qui, quos repellendus totam veniam vero!</p>
-                </article>
-
-                <article id="skills">
-                    <p class="text-white-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque cum debitis dolor eos, esse exercitationem expedita explicabo facilis incidunt itaque iure magni minima molestiae nihil nulla porro sequi sunt suscipit unde vero voluptate voluptatibus. A enim error esse illo iure labore odit perspiciatis, possimus quis repellendus rerum sunt voluptatum?</p>
-                </article>
-
-                <article id="projects">
-                    <div id="projectCommitToTxt">
-                        <img src="..." alt="alternate text for card">
-                        <div>
-                            <h5>VSCode Extension for PROG1000</h5>
-                            <p class="text-white-light">This VSCode extension was created for the PROG1000 class. This creates a TXT
-                                file on the local computer that contains the current branch HEAD reference as
-                                the file content and file name. This was created in TypeScript and was the first
-                                time I used the language.</p>
+            <section id="projects" class="">
+                <h2 class="p-3">Projects</h2>
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card mb-3 bg-dark bg-gradient shadow">
+                                <div class="row g-0">
+                                    <div class="col-md-4 card-img">
+                                        <img src="img/vscode.png" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">VSCode Extension for PROG1000</h5>
+                                            <p class="card-text">Created in TypeScript, this application creates a TXT
+                                                file using the Git reference as the name and content of the file.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="projectUnityGroup">
-                        <img src="..." alt="alternate text for card">
-                        <div>
-                            <h5>Unity Project</h5>
-                            <p class="text-white-light">A Unity Project that was worked on with a group of friends. The concept of the
-                                game (so far) is that you're a student and you need to stay motivated while you're
-                                constantly being hit by new assignments, homework, and the occasional dad joke.</p>
+
+                        <div class="col-lg-6">
+                            <div class="card mb-3 bg-dark bg-gradient shadow">
+                                <div class="row g-0">
+                                    <div class="col-md-4 card-img">
+                                        <img src="img/unity.png" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Unity Project</h5>
+                                            <p class="card-text"> A Unity Project that was worked on with a group of friends. You're a student and
+                                                you need to stay motivated while you're constantly being hit by new assignments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="w-100"></div>
+
+                        <div class="col-lg-6">
+                            <div class="card mb-3 bg-dark bg-gradient shadow">
+                                <div class="row g-0">
+                                    <div class="col-md-4 card-img">
+                                        <img src="img/veldadefense.png" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Android Game</h5>
+                                            <p class="card-text">An online multiplayer tower defense game developed using primarily Java. This
+                                                game features a highscores, in-game advertisements, a payment gateway, and a few
+                                                other features.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </article>
+                    <hr class="text-center mt-3 mb-3"/>
+                </div>
+
+            </section>
+
+            <section>
+                <h2 class="p-3">Skills</h2>
+            </section>
+
+            <section>
+                <h2 class="p-3">Goals</h2>
             </section>
         </main>
-
         <footer>
             <div th:include="fragments/footer :: footer">
 
