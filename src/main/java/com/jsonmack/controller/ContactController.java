@@ -3,6 +3,8 @@ package com.jsonmack.controller;
 import com.jsonmack.model.ContactForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,7 +16,7 @@ import javax.validation.Valid;
 @Controller
 public class ContactController {
 
-    @RequestMapping("/contact")
+    @GetMapping("/contact")
     public String request(Model model) {
         model.addAttribute(new ContactForm());
 
@@ -22,7 +24,7 @@ public class ContactController {
     }
 
     @PostMapping("/contact")
-    public String post(@Valid ContactForm form, Model model) {
+    public String post(@Valid @ModelAttribute ContactForm form, Model model) {
         model.addAttribute(form);
 
         return "contact";
