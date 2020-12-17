@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+* {
+    font-family: "Roboto", Verdana, sans-serif;
+    font-weight: 300;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-}
-
-* {
-    font-family: "Roboto", Verdana, sans-serif;
-    font-weight: 300;
 }
 
 .text-soft {
@@ -56,10 +56,18 @@ body {
     list-style-type: circle;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 751px) {
 
     #projects .card-img img {
-        margin-top: 5px;
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 501px) {
+
+    #projects .card-img img {
+        margin-top: 10px;
         max-width: 96px;
         max-height: 96px;
     }
