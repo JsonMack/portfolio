@@ -8,16 +8,16 @@ import javax.validation.constraints.*;
 public class ContactForm {
 
     @NotEmpty
-    @Size(min = 1, max = 255)
+    @Max(128)
     private String name;
 
     @NotEmpty
-    @Size(min = 1, max = 255)
+    @Max(256)
     @Email
     private String email;
 
     @NotEmpty
-    @Size(min = 32, max = 512)
+    @Max(512)
     private String message;
 
     public ContactForm(String name, String email, String message) {
