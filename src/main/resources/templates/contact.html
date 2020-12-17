@@ -5,8 +5,33 @@
     <body class="bg-black text-soft">
         <div th:include="fragments/header :: header"></div>
 
+        <main>
+            <div class="container-md mt-5" style="max-width: 384px">
+                <h1 class="text-center">Contact Form</h1>
+                <div class="bg-dark rounded-3 p-3 mt-3 text-soft">
+                    <form action="/contact" method="post">
+                        <div class="form-group">
+                            <label class="form-label" for="contactName">Name</label>
+                            <input id="contactName" class="form-control" type="text" placeholder="Name" />
+                        </div>
 
+                        <div class="form-group mt-2">
+                            <label class="form-label" for="contactEmail">Email</label>
+                            <input id="contactEmail" class="form-control" type="email" placeholder="Email" />
+                        </div>
 
-        <div th:include="fragments/footer :: footer"></div>
+                        <div class="form-group mt-2">
+                            <label class="form-label" for="contactMessage">Message</label>
+                            <textarea id="contactMessage" class="form-control" type="text" rows="4"
+                                      placeholder="Enter message that you would like to send."></textarea>
+                        </div>
+
+                        <button class="btn btn-secondary mt-2" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <div th:include="fragments/footer :: footer" class="fixed-bottom"></div>
     </body>
 </html>
