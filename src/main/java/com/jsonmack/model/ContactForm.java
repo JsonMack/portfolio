@@ -1,9 +1,5 @@
 package com.jsonmack.model;
 
-import org.springframework.beans.factory.annotation.Required;
-import org.springframework.lang.NonNull;
-
-import javax.persistence.Entity;
 import javax.validation.constraints.*;
 
 /**
