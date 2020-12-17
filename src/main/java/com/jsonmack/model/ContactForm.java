@@ -1,5 +1,8 @@
 package com.jsonmack.model;
 
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.lang.NonNull;
+
 /**
  * @author Jason MacKeigan
  */
