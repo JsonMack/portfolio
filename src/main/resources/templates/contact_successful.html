@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+    <head th:include="fragments/head :: head">
+        <title>Contact</title>
+    </head>
+
+    <body class="bg-black text-soft">
+        <div th:include="fragments/header :: header"></div>
+
+        <main>
+            <div class="container-sm">
+                <div class="modal-dialog bg-dark rounded-3 mt-5">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header bg-almost-black">
+                            <h1 class="modal-title">Contact Form</h1>
+                        </div>
+                        <div class="modal-body">
+                            Thank you for taking the time to contact me. You should receive a reply within 24-48 hours.
+                        </div>
+                        <div class="modal-footer bg-almost-black">
+                            <a href="/" class="btn btn-success">Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        <div th:include="fragments/footer :: footer" class="fixed-bottom"></div>
+    </body>
+</html>

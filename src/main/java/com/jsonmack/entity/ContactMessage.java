@@ -1,33 +1,42 @@
-package com.jsonmack.model;
+package com.jsonmack.entity;
 
-import javax.validation.constraints.*;
+import javax.persistence.*;
 
 /**
  * @author Jason MacKeigan
  */
-public class ContactForm {
+@Entity
+@Table(name = "contact_message", schema = "jsonmack")
+public class ContactMessage {
 
-    @NotEmpty
-    @Size(min = 1, max = 128)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
+
+    @Column(name = "name")
     private String name;
 
-    @NotEmpty
-    @Size(min = 1, max = 320)
-    @Email
+    @Column(name = "email")
     private String email;
 
-    @NotEmpty
-    @Size(min = 1, max = 512)
+    @Column(name = "message")
     private String message;
 
-    public ContactForm(String name, String email, String message) {
+    public ContactMessage() {
+    }
+
+    public ContactMessage(String name, String email, String message) {
         this.name = name;
         this.email = email;
         this.message = message;
     }
 
-    public ContactForm() {
-        this(null, null, null);
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -44,7 +44,7 @@ body {
 }
 
 #skills .progress {
-    height: 48px;
+    height: 32px;
 }
 
 #skills .progress {
@@ -52,6 +52,11 @@ body {
 }
 
 #volunteer ul li {
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+#education ul li {
     list-style-position: inside;
     list-style-type: circle;
 }
