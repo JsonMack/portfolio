@@ -4,7 +4,6 @@ import com.jsonmack.model.ContactForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.HttpSessionRequiredException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,11 +29,9 @@ public class ContactController {
 
     @PostMapping
     public String post(@Valid @ModelAttribute ContactForm form, BindingResult result, RedirectAttributes attributes, HttpSession session) {
-
         if (result.hasErrors()) {
             attributes.addFlashAttribute("org.springframework.validation.BindingResult.contactForm", result);
             attributes.addFlashAttribute("contactForm", form);
-
             return "redirect:/contact";
         }
 
