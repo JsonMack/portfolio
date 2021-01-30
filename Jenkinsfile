@@ -1,5 +1,12 @@
-node {
-    stage('Maven Build') {
-        buildInfo = rtMaven.run pom: '~/website/pom.xml', goals: 'clean spring-boot:run'
+pipeline {
+    tools {
+        jdk
+    }
+    stages {
+        stage('Maven Build') {
+            steps {
+                sh 'mvn clean spring-boot:run'
+            }
+        }
     }
 }
