@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Maven Build') {
             steps {
-                sh 'mvn clean spring-boot:run'
+                sh 'mvn clean -Dspring-boot.run.jvmArguments="spring.config.location=~/website-resources/application-production.yml" spring-boot:run'
             }
         }
     }
