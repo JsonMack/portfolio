@@ -24,20 +24,11 @@ import java.util.logging.Logger;
 @RequestMapping("/contact")
 public class ContactController {
 
-    private static final Logger logger = Logger.getLogger("ContactController");
-
     private final ContactMessageRepository contactMessageRepository;
 
     @Autowired
     public ContactController(ContactMessageRepository contactMessageRepository) {
         this.contactMessageRepository = contactMessageRepository;
-    }
-
-    @GetMapping
-    public String request(Model model) {
-        model.addAttribute(new ContactForm());
-
-        return "contact";
     }
 
     @PostMapping

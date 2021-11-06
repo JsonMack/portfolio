@@ -19,6 +19,7 @@ application-development.yml
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+src/main/resources/secrets/
 # Package Files #
 *.jar
 *.war

@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  web:
+    container_name: jsonmack-website-container
+    build:
+      context: .
+      cache_from: [
+          maven:3.8.1,
+          openjdk:11-jre-slim
+      ]
+      dockerfile: Dockerfile
+    ports: [ 8080 ]
+

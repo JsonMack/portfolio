@@ -1,0 +1,7 @@
+.idea
+.git
+/target
+!/target/website-1.0.0-SNAPSHOT.jar
+.gitignore
+README.md
+
