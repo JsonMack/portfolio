@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   web:
-    container_name: jsonmack-website-container
+    container_name: jsonmack-web
     build:
       context: .
       cache_from: [
@@ -9,5 +9,11 @@ services:
           openjdk:11-jre-slim
       ]
       dockerfile: Dockerfile
-    ports: [ 8080 ]
+    ports:
+      - "8080:8080"
+    volumes:
+      - database:/home/jsonmack-web/
+volumes:
+  database:
+
 

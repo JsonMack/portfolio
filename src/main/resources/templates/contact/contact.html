@@ -8,15 +8,11 @@
         <div th:include="fragments/header :: header"></div>
 
         <main>
-            <div class="modal-dialog mt-5 rounded" style="max-width: 384px">
-                <div class="modal-header bg-almost-black">
-                    <h3 class="modal-title">Contact Successful</h3>
-                </div>
-
+            <div class="modal-dialog mt-5 rounded">
                 <div class="modal-content bg-dark text-soft p-2">
                     <p class="mt-2">Please feel free to contact me regarding site issues, work inquiries, coffee talk, or anything of the sort!</p>
                     <hr/>
-                    <form th:action="@{/contact}" th:object="${contactForm}" method="post">
+                    <form th:action="@{/contact/create}" th:object="${contactForm}" method="post">
                         <div class="form-group">
                             <label class="form-label" for="contactName">Name</label>
                             <input id="contactName" class="form-control" type="text" placeholder="Name" th:field="*{name}"/>
