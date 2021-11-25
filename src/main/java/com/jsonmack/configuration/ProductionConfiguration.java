@@ -2,6 +2,7 @@ package com.jsonmack.configuration;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
+import org.apache.catalina.startup.Tomcat;
 import org.apache.tomcat.util.descriptor.web.SecurityCollection;
 import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,11 +41,13 @@ public class ProductionConfiguration {
 
     @Bean("httpsConnector")
     public Connector httpsConnector() {
-        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+        Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
+
         connector.setScheme("http");
         connector.setPort(8080);
         connector.setSecure(false);
         connector.setRedirectPort(8443);
+
         return connector;
     }
 

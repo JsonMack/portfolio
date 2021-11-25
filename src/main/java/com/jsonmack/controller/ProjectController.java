@@ -13,7 +13,6 @@ import java.util.List;
 /**
  * @author Jason MacKeigan
  */
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController()
 @RequestMapping("api/")
 public class ProjectController {
